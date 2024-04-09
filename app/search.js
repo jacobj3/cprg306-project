@@ -40,4 +40,6 @@ const SearchBar = React.memo(() => {
   );
 });
 
+SearchBar.displayName = "SearchBar";
+
 export default SearchBar;
