@@ -45,11 +45,6 @@ function Page() {
             to="/"
             className="text-6xl font-boldfinger hover:text-gray-500 transition-colors duration-200 flex items-center"
           >
-            <img
-              src="/assets/film-reel.png"
-              alt="Film Reel"
-              className="w-20 h-20 mr-2 -mt-5"
-            />{" "}
             FilmFinder
           </Link>
           <SearchBar className="w-64" />
