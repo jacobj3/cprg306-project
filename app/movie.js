@@ -48,20 +48,20 @@ const Movie = ({ searchTerm }) => {
   }, [searchTerm, currentTab, tabClicked, getMovies]);
 
   return (
-    <div>
-      <div className="hero bg-gray-800 text-white p-6 rounded-lg mb-6">
+    <div className="mx-auto max-w-screen-xxl p-6">
+      <div className="hero bg-gradient-to-r from-orange-400 to-red-500 text-white p-6 rounded-lg mb-6">
         <h1 className="text-3xl font-bold">Welcome!</h1>
         <p className="text-lg mt-4">
           Feel free to view popular, top rated, and upcoming movies below or
           discover new gems with our user-friendly search feature. Want to delve
           deeper into the details? Click on any movie to uncover insightful
-          information and view the trailer.
+          information and watch the trailer.
         </p>
       </div>
       <div className="mb-10 mt-8">
         <button
           className={`text-1xl mx-2 font-bold ${
-            currentTab === "popular" ? "text-orange-500" : ""
+            currentTab === "popular" ? "text-orange-400" : ""
           }`}
           onClick={() => {
             setTabClicked(true);
@@ -93,15 +93,15 @@ const Movie = ({ searchTerm }) => {
           UPCOMING
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {isLoading ? (
           <p>Loading...</p>
         ) : (
           movies.map((movie) => (
-            <div key={movie.id} className="flex flex-col items-center mx-2">
+            <div key={movie.id} className="flex flex-col items-start mx-2">
               <Link to={`/movie/${movie.id}`}>
                 <Image
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
                   alt={movie.title}
                   width={500}
                   height={750}

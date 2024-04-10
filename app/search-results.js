@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Image from "next/image";
 
 const API_KEY = "36ea91bcca88cd25d05f7bef389386cd";
 
@@ -45,15 +46,17 @@ const SearchResults = () => {
     <div className="mx-auto max-w-screen-xxl p-6">
       <h2 className="text-2xl font-bold mb-10">
         <span className="text-white">Search results for </span>
-        <span className="text-orange-500">{searchTerm}</span>
+        <span className="text-orange-400">{searchTerm}</span>
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {movies.map((movie) => (
-          <div key={movie.id} className="flex flex-col items-center mx-2">
+          <div key={movie.id} className="flex flex-col items-start mx-2">
             <Link to={`/movie/${movie.id}`}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              <Image
+                src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
                 alt={movie.title}
+                width={500}
+                height={750}
                 className="max-w-full rounded-lg"
               />
             </Link>

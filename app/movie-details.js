@@ -56,8 +56,8 @@ const MovieDetails = () => {
         <Image
           src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
           alt={movie.title}
-          width={384}
-          height={576}
+          width={400}
+          height={600}
           className="rounded shadow-lg"
         />
         <div>
@@ -86,7 +86,7 @@ const MovieDetails = () => {
             {movie.genres.map((genre, index) => (
               <div
                 key={index}
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2"
+                className="inline-block bg-gradient-to-r from-orange-400 to-red-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2"
               >
                 {genre.name}
               </div>
