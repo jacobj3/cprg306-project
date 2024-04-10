@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Image from "next/image";
 
 const API_KEY = "36ea91bcca88cd25d05f7bef389386cd";
 
@@ -52,10 +53,12 @@ const MovieDetails = () => {
     >
       <h2 className="text-4xl font-bold mb-4">{movie.title}</h2>
       <div className="flex space-x-4">
-        <img
+        <Image
           src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
           alt={movie.title}
-          className="w-96 object-cover rounded shadow-lg"
+          width={384}
+          height={576}
+          className="rounded shadow-lg"
         />
         <div>
           <p className="mb-2">

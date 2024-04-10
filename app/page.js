@@ -1,11 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import SearchBar from "./search";
+import SearchBar from "./search-bar";
 import SearchResults from "./search-results";
 import { Link } from "react-router-dom";
 
 function Page() {
-  const [searchTerm, setSearchTerm] = useState("");
   const [Router, setRouter] = useState(null);
   const [Routes, setRoutes] = useState(null);
   const [Route, setRoute] = useState(null);
@@ -40,13 +39,13 @@ function Page() {
 
   return (
     <Router>
-      <div className="mx-auto max-w-screen-xxl px-8 py-6 bg-gray-900 text-white">
+      <div className="mx-auto max-w-screen-xxl px-8 py-6 bg-gray-900 text-white min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <Link
             to="/"
-            className="text-5xl font-bold text-blue-500 hover:text-blue-300 transition-colors duration-200"
+            className="text-6xl font-boldfinger hover:text-gray-500 transition-colors duration-200"
           >
-            Movie Database
+            FilmFinder
           </Link>
           <SearchBar className="w-64" />
         </div>

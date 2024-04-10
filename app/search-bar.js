@@ -6,12 +6,14 @@ const SearchBar = React.memo(() => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate(`/search/${encodeURIComponent(searchTerm)}`);
-    setSearchTerm("");
+    if (searchTerm.trim() !== "") {
+      navigate(`/search/${encodeURIComponent(searchTerm)}`);
+      setSearchTerm("");
+    }
   };
 
   const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && searchTerm.trim() !== "") {
       handleSearch();
     }
   };
@@ -21,6 +23,7 @@ const SearchBar = React.memo(() => {
       <div className="relative">
         <input
           type="text"
+          name="search"
           placeholder="Search for movies..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -30,6 +33,7 @@ const SearchBar = React.memo(() => {
         />
         <button
           onClick={handleSearch}
+          disabled={!searchTerm.trim()}
           className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:bg-blue-600 text-white rounded-r-md transition duration-300 ease-in-out focus:outline-none focus:ring focus:border-blue-400"
           style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
         >

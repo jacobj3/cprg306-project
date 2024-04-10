@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Boldfinger';
+  src: url('/fonts/Boldfinger.ttf') format('truetype');
+}

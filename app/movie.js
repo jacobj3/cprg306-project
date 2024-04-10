@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-
+import Image from "next/image";
 const API_KEY = "36ea91bcca88cd25d05f7bef389386cd";
 
 const Movie = ({ searchTerm }) => {
@@ -50,11 +50,12 @@ const Movie = ({ searchTerm }) => {
   return (
     <div>
       <div className="hero bg-gray-800 text-white p-6 rounded-lg mb-6">
-        <h1 className="text-3xl font-bold">Welcome to Movie Database</h1>
+        <h1 className="text-3xl font-bold">Welcome!</h1>
         <p className="text-lg mt-4">
-          Feel free to search for your favorite movies or discover new gems with
-          our user-friendly search feature. Want to delve deeper into the
-          details? Click on any movie to uncover insightful information.
+          Feel free to view popular, top rated, and upcoming movies below or
+          discover new gems with our user-friendly search feature. Want to delve
+          deeper into the details? Click on any movie to uncover insightful
+          information and view the trailer.
         </p>
       </div>
       <div className="mb-10 mt-8">
@@ -99,9 +100,11 @@ const Movie = ({ searchTerm }) => {
           movies.map((movie) => (
             <div key={movie.id} className="flex flex-col items-center mx-2">
               <Link to={`/movie/${movie.id}`}>
-                <img
+                <Image
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
+                  width={500}
+                  height={750}
                   className="max-w-full rounded-lg"
                 />
               </Link>
