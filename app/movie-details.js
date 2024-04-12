@@ -86,7 +86,7 @@ const MovieDetails = () => {
             {movie.genres.map((genre, index) => (
               <div
                 key={index}
-                className="inline-block bg-gradient-to-r from-orange-400 to-red-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2"
+                className="inline-block bg-gradient-to-br from-blue-800 to-cyan-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2"
               >
                 {genre.name}
               </div>

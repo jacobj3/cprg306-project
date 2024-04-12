@@ -49,7 +49,7 @@ const Movie = ({ searchTerm }) => {
 
   return (
     <div className="mx-auto max-w-screen-xxl p-6">
-      <div className="hero bg-gradient-to-r from-orange-400 to-red-500 text-white p-6 rounded-lg mb-6">
+      <div className="hero bg-gradient-to-br from-blue-800 to-cyan-500 text-white p-6 rounded-lg mb-6">
         <h1 className="text-3xl font-bold">Welcome!</h1>
         <p className="text-lg mt-4">
           Feel free to view popular, top rated, and upcoming movies below or
@@ -61,7 +61,7 @@ const Movie = ({ searchTerm }) => {
       <div className="mb-10 mt-8">
         <button
           className={`text-1xl mx-2 font-bold ${
-            currentTab === "popular" ? "text-orange-400" : ""
+            currentTab === "popular" ? "text-cyan-300" : ""
           }`}
           onClick={() => {
             setTabClicked(true);
@@ -72,7 +72,7 @@ const Movie = ({ searchTerm }) => {
         </button>
         <button
           className={`text-1xl mx-2 font-bold ${
-            currentTab === "top_rated" ? "text-orange-500" : ""
+            currentTab === "top_rated" ? "text-cyan-300" : ""
           }`}
           onClick={() => {
             setTabClicked(true);
@@ -83,7 +83,7 @@ const Movie = ({ searchTerm }) => {
         </button>
         <button
           className={`text-1xl mx-2 font-bold ${
-            currentTab === "upcoming" ? "text-orange-500" : ""
+            currentTab === "upcoming" ? "text-cyan-300" : ""
           }`}
           onClick={() => {
             setTabClicked(true);

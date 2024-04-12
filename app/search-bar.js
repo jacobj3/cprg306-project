@@ -34,7 +34,7 @@ const SearchBar = React.memo(() => {
         <button
           onClick={handleSearch}
           disabled={!searchTerm.trim()}
-          className="px-6 py-3 bg-gradient-to-r from-orange-400 to-red-500 hover:bg-blue-600 text-white rounded-r-md transition duration-300 ease-in-out focus:outline-none focus:ring focus:border-blue-400"
+          className="px-6 py-3 bg-gradient-to-br from-blue-800 to-cyan-500 hover:bg-blue-600 text-white rounded-r-md transition duration-300 ease-in-out focus:outline-none focus:ring focus:border-blue-400"
           style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
         >
           Search

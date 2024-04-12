@@ -36,8 +36,7 @@ const SearchResults = () => {
   if (movies.length === 0) {
     return (
       <p className="p-6 text-2xl font-bold mb-10">
-        No results found for{" "}
-        <span className="text-orange-500">{searchTerm}</span>
+        No results found for <span className="text-cyan-300">{searchTerm}</span>
       </p>
     );
   }
@@ -46,7 +45,7 @@ const SearchResults = () => {
     <div className="mx-auto max-w-screen-xxl p-6">
       <h2 className="text-2xl font-bold mb-10">
         <span className="text-white">Search results for </span>
-        <span className="text-orange-400">{searchTerm}</span>
+        <span className="text-cyan-300">{searchTerm}</span>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {movies.map((movie) => (
