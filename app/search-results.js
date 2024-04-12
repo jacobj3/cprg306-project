@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Image from "next/image";
 
-const API_KEY = "36ea91bcca88cd25d05f7bef389386cd";
+const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
 const SearchResults = () => {
   const { term } = useParams();
